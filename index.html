@@ -1,1 +1,240 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<title>kinoubi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    opacity: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('fractal.png');
+    min-height: 100%;
+}
+
+.whitelayer {
+    background:rgba(255,255,255,0.5);
+    min-height: 100%;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("fractal.png");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+.logo {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+
+.kinoubi-color {
+    background-color: #5076B9
+}
+
+.small-btn-override {
+    font-size: 0.7em;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    z-index: 0;
+}
+
+#googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+}
+
+/* Turn off parallax scrolling for tablets and mobiles */
+@media only screen and (max-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <ul class="w3-navbar" id="myNavbar">
+    <li><a href="#" class="w3-padding-large">HOME</a></li>
+    <li><a href="#about" class="w3-padding-large">ABOUT</a></li>
+    <li><a href="#contact" class="w3-padding-large">CONTACT</a></li>
+  </ul>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container">
+  <!--<div class="w3-display-middle" style="white-space:nowrap;">-->
+    <span class="w3-animate-opacity logo"><img class="logo" src="kinoubi.png" width="33%"></span>
+  <!--</div>-->
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">About kinoubi</h3>
+  <p class="w3-center"><em>kinoubi makes functional software</em></p>
+  <p>At kinoubi we believe in high quality code, that just works. We use software quality metrics to achieve an exceptional level of quality. Our main programming language is Haskell because of its elegance and philosophy of functional purity. It is what we believe in, it is our name: 'kinoubi' means 'functional elegance' in Japanese. Our code is produced for a range of different domains including data mining and machine learning.</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-section">
+      <p><b>Stéphane Thibaud</b> <a target="_blank" class="w3-btn-floating kinoubi-color small-btn-override" href="https://www.linkedin.com/in/st%C3%A9phane-thibaud-a60668b0" title="Linkedin"><i class="fa fa-linkedin"></i></a></p><br>
+      <img src="me.jpg" width="35%" class="w3-circle" alt="Photo of Me">
+    </div>
+    <div class="w3-col m6 w3-section">
+      <p>I am Stéphane, the person behind kinoubi. I have wide programming experience which ranges from assembler and C to more high level programming languages like Haskell and Python. I have a passion for programming, data mining and machine learning. I am also interested in travel, culture, nice food and learning new things!</p>
+    </div>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Contact Text -->
+<div class="bgimg-3 w3-display-container">
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">Contact</h3>
+  <p class="w3-center"><em>Let's get in touch!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large"></div>
+    </div>
+    <div class="w3-col m8 w3-container w3-section" id="form">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker w3-hover-text-black" style="width:30px"></i>
+        Address:<br>
+        Generaal Eisenhowerplein 5-F075<br>
+        2288AE Rijswijk<br>
+        The Netherlands<br>
+        <i class="fa fa-phone w3-hover-text-black" style="width:30px"></i> Phone: +31636254941<br>
+        <i class="fa fa-envelope w3-hover-text-black" style="width:30px"> </i> Email: snthibaud@kinoubi.xyz<br>
+      </div>
+      <p>Swing by for a cup of green tea, or leave a message:</p>
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+          <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Name">
+        </div>
+        <div class="w3-half">
+          <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Email">
+        </div>
+      </div>
+      <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Message">
+      <button class="w3-btn w3-section w3-right kinoubi-color" onclick="sendMessage();">SEND</button>
+      <div id="messageBox"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-btn-floating kinoubi-color" href="https://www.facebook.com/kinoubi/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-btn-floating kinoubi-color" href="https://www.linkedin.com/company/kinoubi" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a><br>
+  kinoubi is registered at the Dutch Chamber of Commerce under number 66706629.
+</footer>
+
+ 
+<!-- Add Google Maps -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANZiBb3J7jZTJD9aJX0tu09PhBYN6C5kY&callback=initialize"
+  type="text/javascript"></script>
+<script>
+function initialize() {
+var myCenter = new google.maps.LatLng(52.037764, 4.323405);
+var mapProp = {
+  center: myCenter,
+  zoom: 4,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+//google.maps.event.addDomListener(window, 'load', initialize);
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-navbar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+    }
+}
+</script>
+
+<!-- Script for sending a message -->
+<script>
+    function sendMessage() {
+        var form = document.getElementById("form");
+        var obj = {};
+        var inputs = form.getElementsByTagName("input");
+        var i;
+        for (i = 0; i < inputs.length; i++) {
+            obj[inputs[i].placeholder.toLowerCase()] = inputs[i].value;
+        }
+        $.post("send_message", JSON.stringify(obj), handleResponse, "json");
+    }
+    function handleResponse(data){
+        displayMessage(data.message);
+    }
+    function displayMessage(message) {
+        var timeOut = 5
+        jQuery('#messageBox').text(message).fadeIn()
+        jQuery('#messageBox').css("display", "block")
+        setTimeout(function() {
+        jQuery('#messageBox').fadeOut()
+        jQuery('#messageBox').css("display", "none")
+        }, timeOut * 1000);
+    }
+</script>
+<script type="text/javascript">
+    function downloadJSAtOnload(url) {
+        var element = document.createElement("script");
+        element.src = url;
+        document.body.appendChild(element);
+    }
+    function loadExternalScripts() {
+        downloadJSAtOnload("https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js");
+    }
+    if (window.addEventListener) window.addEventListener("load", loadExternalScripts, false);
+    else if (window.attachEvent) window.attachEvent("onload", loadExternalScripts);
+    else window.onload = loadExternalScripts;
+</script>
+</body>
+</html>
